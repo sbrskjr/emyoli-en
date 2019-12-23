@@ -1,0 +1,103 @@
+html
+body
+  font-family: 'Quicksand', sans-serif
+  box-sizing: border-box
+  position: relative
+  font-style: normal
+  font-weight: bold
+  font-size: 24px
+  line-height: 150%
+  color: #000
+.container
+  box-sizing: border-box
+  +rmin(1200)
+    max-width: 1466px !important
+.out
+  +r(991)
+    padding-top: 91px
+a
+  text-decoration: none
+  transition: all 0.3s
+input[type="submit"]
+  appearance: none
+  -webkit-appearance: none
+textarea
+  resize: none
+
+
++r(767)
+	.hidden-xs
+		display: none !important
+@media only screen and (min-width: 768px) and (max-width: 1024px)
+	.hidden-sm
+		display: none !important
++rmin(1024)
+	.hidden-md
+		display: none !important
+
+
+.chat
+  display: flex
+  align-items: center
+  position: fixed
+  bottom: 0
+  right: 20px
+  background: #1DBECF
+  box-shadow: -2px -2px 2px rgba(0, 0, 0, 0.25)
+  border-top-right-radius: 6px
+  border-top-left-radius: 6px
+  z-index: 3
+  width: 280px
+  height: 60px
+  padding: 0 35px
+  +r(767)
+    border-radius: 40px
+    bottom: 10px
+    width: 95px
+    height: 50px
+    justify-content: center
+    padding: 0
+  span
+    font-weight: bold
+    font-size: 24px
+    color: #fff
+    text-transform: uppercase
+    +r(767)
+      display: none
+    &:before
+      content: ''
+      width: 12px
+      height: 12px
+      display: block
+      background: #96FF1B
+      border-radius: 50%
+      position: absolute
+      right: 27px
+      top: 24px
+  img
+    display: none
+    +r(767)
+      display: block
+
+
+
+
+
+
+
+.pages
+  padding: 150px 0 50px
+  h1
+    font-size: 40px
+    color: $black
+    margin-bottom: 30px
+    display: block
+    text-align: center
+  li
+    +center
+    a
+      font-size: 18px
+      color: $black
+      line-height: 2
+      &:hover
+        text-decoration: underline

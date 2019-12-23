@@ -1,0 +1,159 @@
+.header
+  border-bottom: 1px solid #1DBECF
+  position: relative
+  z-index: 9
+  background: #fff
+  +r(991)
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+  .menu-open
+    position: relative
+    width: 30px
+    height: 20px
+    margin-right: 15px
+    display: none
+    +r(991)
+      display: block
+    span
+      width: 30px
+      height: 3px
+      background: #000
+      border-radius: 5px
+      display: block
+      +tr
+      &:before, &:after
+        content: ''
+        width: 30px
+        height: 3px
+        background: #000
+        border-radius: 5px
+        display: block
+        +tr
+        position: absolute
+      &:before
+        top: 8px
+      &:after
+        bottom: 0
+    &.active
+      span
+        width: 0
+        &:before
+          transform: rotate(45deg)
+          top: 10px
+        &:after
+          transform: rotate(-45deg)
+          top: 10px
+  &__logo
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 45px 0 20px
+    +r(991)
+    padding: 20px 0
+    &-row
+      display: flex
+      align-items: center
+    img
+      height: 103px
+      +r(991)
+        height: 50px
+        margin-right: 10px
+    a
+      background: #EB2629
+      border: 1px solid #EB2629
+      border-radius: 6px
+      font-weight: bold
+      font-size: 36px
+      color: #fff
+      width: 203px
+      height: 73px
+      display: flex
+      align-items: center
+      justify-content: center !important
+      +r(991)
+        width: 140px
+        height: 45px
+        font-size: 30px
+      &:hover
+        background: none
+        color: #EB2629
+  &__nav
+    display: flex
+    justify-content: space-between
+    padding-bottom: 25px
+    +r(991)
+      position: fixed
+      left: -80%
+      top: 91px
+      width: 240px
+      height: calc(100% - 90px)
+      background: #fff
+      flex-direction: column
+      justify-content: flex-start
+      padding: 30px
+      overflow: auto
+      transition: all 0.6s
+      &.active
+        left: 0
+    a
+      font-weight: bold
+      font-size: 24px
+      color: #1DBECF
+      line-height: 30px
+      display: flex
+      align-items: center
+      margin-right: 25px
+      +r(991)
+        padding-bottom: 20px
+        margin-right: 0
+        display: inline-block !important
+      &:hover
+        text-decoration: underline
+    ul
+      display: flex
+      +r(991)
+        flex-direction: column
+      li
+        a
+          +r(991)
+            font-size: 20px
+        &:last-child
+          a
+            position: relative
+            color: #000
+            &:before
+              content: ''
+              width: 4px
+              height: 33px
+              background: #000
+              display: block
+              margin-right: 25px
+              +r(991)
+                width: 25px
+                height: 3px
+                margin-right: 0
+                margin-bottom: 20px
+            &:after
+              content: ''
+              position: absolute
+              width: 7px
+              height: 7px
+              background: #7CD90F
+              border-radius: 50%
+              right: -4px
+              top: 0
+              +r(991)
+                top: 21px
+                right: -6px
+              
+.bg
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  height: 100%
+  background: rgba(0, 0, 0, 0.4)
+  z-index: 8
+  display: none

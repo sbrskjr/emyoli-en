@@ -1,0 +1,86 @@
+.home-video
+  &__baner
+    background: #242424
+    padding: 40px 0
+    img
+      height: 93px
+      +r(767)
+        height: 60px
+  &__block
+    +r(767)
+      padding-bottom: 40px
+    img
+      width: 100%
+      margin-bottom: 45px
+      +r(767)
+        width: calc(100% + 30px)
+        margin-left: -15px
+        margin-bottom: 30px
+    a
+      +center
+      span
+        font-weight: normal
+        font-size: 36px
+        color: #000000
+        line-height: 1
+        padding: 18px 30px
+        background: #fff
+        border: 1px solid #242424
+        margin-right: 10px
+        border-radius: 6px
+        +r(767)
+          font-size: 30px
+          padding: 17px 22px
+      i
+        font-style: normal
+        border: 1px solid #242424
+        border-radius: 6px
+        background: #ffffff
+        width: 74px
+        height: 74px
+        +center
+        +tr
+        +r(767)
+          height: 64px
+        svg
+          width: 34px
+          height: 34px
+      &:hover
+        i
+          transform: translate(6px)
+  &__content
+    padding-top: 60px
+    +r(767)
+      padding-top: 40px
+    h3
+      font-weight: bold
+      font-size: 36px
+      color: #7CD90F
+      margin-bottom: 20px
+      line-height: 1.5
+      +r(767)
+        font-size: 30px
+    p
+      font-weight: bold
+      font-size: 24px
+      line-height: 1.5
+      color: #000000
+      margin-bottom: 30px
+      +r(767)
+        font-size: 20px
+
+
+
+
+
+  &--primary
+    .home-video__baner
+      background: #ffffff
+    .home-video__content
+      background: #A92D91
+      h3, p
+        color: #fff
+    .home-video__block
+      a
+        span, i
+          border: none

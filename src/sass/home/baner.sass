@@ -1,0 +1,31 @@
+.home-baner
+  background: #242424
+  padding: 40px 0
+  h3
+    font-weight: bold
+    font-size: 48px
+    line-height: 1.5
+    text-transform: uppercase
+    color: #ffffff
+    +r(767)
+      font-size: 44px
+      margin-bottom: 30px
+  &__img
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    height: 100%
+    +r(991)
+      justify-content: center
+    img
+      width: 145px
+      margin-left: 40px
+      +r(1200)
+        width: 120px
+      +r(767)
+        width: 100px
+        margin-left: 20px
+      +r(374)
+        width: 80px
+      &:first-child
+        margin-left: 0
