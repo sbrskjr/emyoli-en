@@ -1,0 +1,23 @@
+---
+title: Contact
+---
+extends layouts/_layout
+block content
+  .contact
+    .container
+      h1 Let’s work together
+      form.contact__form
+          .row
+            .col-md-6.col-12
+              p Thank you, we are now emailing you the e-book!
+              span Name
+              input(type="text" name="name" placeholder="Name" required)
+              span Email
+              input(type="email" name="email" placeholder="Email" required)
+              span Message
+              textarea(name="message" placeholder="Leave your message here" required)
+              button(type="submit") Submit
+                +icon('double-left-chevron')
+            .col-md-6.col-12
+              h5 Israel Office
+              

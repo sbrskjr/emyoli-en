@@ -1,0 +1,34 @@
+---
+title: Download eBook
+---
+extends layouts/_layout
+block content
+  .download
+    .download__intro
+      .container
+        h1 Don’t hire a software development company before reading this book
+        .row
+          .col-md-4.col-12
+            img(src="img/download-img.png", alt="")
+          .col-md-8.col-12
+            .download__intro__text
+              p You need  a development company to take your idea, and turn it into the product of your dreams. One small problem; in a sea of software vendors, how can you possibly find the one that’s right for you? It can be daunting; but don’t worry! Finding the right software development company doesn’t have to be a struggle.
+              p In our free e-book, you’ll discover key factors to help you find the best solution for your needs. Arm yourself with these tips, and you can choose a vendor with confidence.
+    .download__video
+      .container
+        h2 WHY SHOULD I DOWNLOAD THIS EBOOK
+        img(src="img/apps-video.png", alt="")
+    form.download__form
+      .container
+        h2 Please, Fill the form to get e-Book now
+        p Thank you, we are now emailing you the e-book!
+        .row
+          .col-md-6.col-12
+            span Name
+            input(type="text" name="name" placeholder="Name" required)
+          .col-md-6.col-12
+            span Email
+            input(type="email" name="email" placeholder="Email" required)
+          .col-12
+            button(type="submit") Download eBook
+              +icon('double-left-chevron')

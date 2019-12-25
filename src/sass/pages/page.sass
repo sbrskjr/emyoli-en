@@ -34,6 +34,25 @@
     margin-bottom: 30px
     +r(767)
       margin-bottom: 20px
+      font-size: 20px
+  img
+    max-width: 100%
+    margin-bottom: 30px
+  &__baner
+    background: rgba(124, 217, 15, 0.5)
+    padding: 10px 0
+    p
+      color: #242424
+      margin-bottom: 0
+  &__video
+    padding: 40px 0 10px
+    +center
+    +r(767)
+      padding: 40px 0 0
+    img
+      max-width: 840px
+      width: calc(100% + 30px)
+      margin-bottom: 0
   &__block
     padding: 40px 0 20px
     border-bottom: 1px solid #7CD90F
@@ -56,6 +75,8 @@
     +center-y
     padding-top: 50px
     padding-bottom: 10px
+    +r(767)
+      padding: 40px 0
     a
       color: #A92D91
       font-size: 36px
@@ -71,3 +92,19 @@
       height: 30px
       +r(767)
         height: 22px
+
+
+
+
+
+
+
+
+  &.post
+    padding-top: 0
+    h1
+      color: #000000
+      text-align: left
+      margin: 40px 0
+      +r(767)
+        margin: 20px 0
