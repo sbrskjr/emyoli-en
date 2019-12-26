@@ -7,17 +7,31 @@ block content
     .container
       h1 Let’s work together
       form.contact__form
-          .row
-            .col-md-6.col-12
-              p Thank you, we are now emailing you the e-book!
-              span Name
-              input(type="text" name="name" placeholder="Name" required)
-              span Email
-              input(type="email" name="email" placeholder="Email" required)
-              span Message
-              textarea(name="message" placeholder="Leave your message here" required)
-              button(type="submit") Submit
-                +icon('double-left-chevron')
-            .col-md-6.col-12
+        .row
+          .col-lg-6.col-12
+            p Your message was sent!
+            span Name
+            input(type="text" name="name" placeholder="Name" required)
+            span Email
+            input(type="email" name="email" placeholder="Email" required)
+            span Message
+            textarea(name="message" placeholder="Leave your message here" required)
+            button(type="submit") Submit
+              +icon('double-left-chevron')
+          .col-lg-5.col-12.offset-lg-1
+            .contact__connection
               h5 Israel Office
-              
+              a(href="#") 
+                +icon('location')
+                b 1 Shenkar St. Herzliya
+              a(href="tel:+97293720009") 
+                +icon('tel')
+                b +972.9.3720009
+            .contact__connection
+              h5 New York Office
+              a(href="#") 
+                +icon('location')
+                b 70 West 83rd St. NYC, New York
+              a(href="tel:+9176991800") 
+                +icon('tel')
+                b +917.699.1800

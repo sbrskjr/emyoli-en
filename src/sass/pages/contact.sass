@@ -1,20 +1,24 @@
 .contact
   padding: 40px 0
+  +r(767)
+    padding: 40px 0 60px
   h1
     font-weight: bold
     font-size: 48px
     color: #000
     text-align: center
     align-items: 1.5
-    margin-bottom: 40px
+    margin-bottom: 10px
+    +r(767)
+      font-size: 30px
   &__form
     h2
       margin-bottom: 5px
     p
       color: #7CD90F
       text-align: center
-      margin-bottom: 15px
       opacity: 0
+      line-height: 1.5s
     span
       font-weight: bold
       font-size: 24px
@@ -45,11 +49,13 @@
       +r(767)
         font-size: 20px
         padding: 10px 15px
-        margin-bottom: 20px
+        margin-bottom: 10px
       &:valid
         border-color: #7CD90F
     textarea
       height: 205px
+      +r(767)
+        height: 250px
     button
       background: #7CD90F
       border-radius: 6px
@@ -64,6 +70,8 @@
       +tr
       +r(767)
         font-size: 30px
+        padding: 14px 0
+        margin-top: 20px
       svg
         fill: #fff
         transform: rotate(180deg)
@@ -75,7 +83,45 @@
         left: 0
         +r(767)
           margin-left: 10px
+          width: 25px
       &:hover
         text-decoration: underline
         svg
           left: 7px
+  &__connection
+    padding-top: 50px
+  h5
+    font-weight: bold
+    font-size: 36px
+    line-height: 1.5
+    color: #000
+    text-transform: uppercase
+    margin-bottom: 30px
+    margin-left: 55px
+    +r(767)
+      font-size: 30px
+      margin-left: 45px
+      margin-bottom: 10px
+  a
+    display: flex
+    align-items: flex-start
+    margin-bottom: 5px
+    b
+      flex: 1
+      display: block
+      font-weight: normal
+      font-size: 36px
+      line-height: 1.5
+      color: #000
+      +r(767)
+        font-size: 30px
+    svg
+      width: 35px
+      height: 35px
+      fill: #7CD90F
+      margin-right: 20px
+      margin-top: 10px
+      +r(767)
+        margin-right: 20px
+        width: 25px
+        height: 25px

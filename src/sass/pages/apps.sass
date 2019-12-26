@@ -1,0 +1,95 @@
+.apps
+  padding: 60px 0 0
+  +r(991)
+    padding-top: 40px
+  h1
+    font-weight: bold
+    font-size: 48px
+    color: #A92D91
+    text-align: center
+    line-height: 1.5
+    +r(991)
+      font-size: 30px
+  h4
+    margin-bottom: 30px
+    padding-left: 25px
+    display: inline-block
+    +r(991)
+      padding-left: 0
+    +r(575)
+      position: relative !important
+      padding-right: 25px
+    span
+      font-weight: bold
+      font-size: 36px
+      line-height: 1.5
+      text-transform: uppercase
+      color: #fff
+      position: relative
+      z-index: 2
+      +r(991)
+        font-size: 30px
+    &:before
+      content: ''
+      background: #A92D91
+      border-radius: 0px 15px 15px 0px
+      height: 60px
+      width: 60vw
+      position: absolute
+      left: 0
+      top: 57px
+      z-index: 1
+      +r(991)
+        top: 30px
+        height: 45px
+      +r(575)
+        width: calc(100% + 15px)
+        left: -15px
+        top: 0 !important
+        height: 100%
+  strong
+    font-weight: bold
+    font-size: 36px
+    color: #A92D91
+    line-height: 1.5
+    margin-bottom: 20px
+    display: block
+    text-transform: uppercase
+    +r(991)
+      font-size: 20px
+  p
+    font-weight: bold
+    font-size: 24px
+    line-height: 1.5
+    color: #000
+    margin-bottom: 20px
+    +r(991)
+      font-size: 20px
+  &__block
+    position: relative
+    overflow: hidden
+    padding: 60px 0
+    +r(991)
+      padding: 30px 0 40px
+    &__img
+      height: 100%
+      +center
+      justify-content: flex-end
+      +r(991)
+        justify-content: center !important
+      img
+        max-width: 100%
+    &-secondary
+      background: #F2F2F2
+      h4
+        position: relative
+        +r(991)
+          position: static
+        &:before
+          border-radius: 15px 0px 0px 15px
+          top: -2px
+          +r(991)
+            border-radius: 0px 15px 15px 0px
+            top: 30px
+      .apps__block__img
+        justify-content: flex-start

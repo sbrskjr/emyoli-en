@@ -1,0 +1,136 @@
+.blog
+  padding-top: 20px
+  overflow: hidden
+  +r(767)
+    padding-top: 0
+    padding-bottom: 40px
+  h2
+    font-weight: bold
+    font-size: 48px
+    line-height: 1.5
+    color: #000
+    margin-bottom: 20px
+    +r(767)
+      font-size: 30px
+  h3
+    font-weight: bold
+    font-size: 36px
+    line-height: 1.5
+    padding: 0 50px
+    color: #ffffff
+    background: #7CD90F
+    display: inline-block
+    margin-bottom: 30px
+    +r(767)
+      font-size: 30px
+  h4
+    font-weight: bold
+    font-size: 24px
+    color: #000000
+    line-height: 1.5
+    position: relative
+    padding: 10px 0
+    display: block
+    +r(767)
+      font-size: 20px
+    &:before
+      content: ''
+      width: 60vw
+      background: rgba(124, 217, 15, 0.5)
+      right: 0
+      top: 0
+      height: 100%
+      display: block
+      position: absolute
+      z-index: -1
+      +r(991)
+        width: 100vh
+        right: -150px
+  img
+    max-width: 100%
+    margin: 20px 0
+  p, span
+    font-weight: bold
+    font-size: 24px
+    line-height: 1.5
+    color: #000
+    margin-bottom: 10px
+    display: block
+    +r(767)
+      font-size: 20px
+  span
+    margin-bottom: 0
+    font-size: 17px
+    display: block
+    +r(767) 
+      font-size: 17px
+  &__content
+    position: relative
+    padding: 40px 0
+    +r(767)
+      padding: 20px 0 25px
+    &:before
+      content: ''
+      background: #7CD90F
+      height: 4px
+      width: 60vw
+      right: 0
+      bottom: 0
+      position: absolute
+      +r(991)
+        width: 100vh
+        right: -150px
+    a
+      font-weight: bold
+      font-size: 24px
+      line-height: 1.5
+      color: #000
+      display: inline-block
+      position: relative
+      padding: 10px 0
+      padding-right: 40px
+      margin-top: 20px
+      &:hover
+        text-decoration: underline
+      +r(991)
+        display: block
+      +r(767)
+        font-size: 20px
+      &:before
+        content: ''
+        width: 40vw
+        background: rgba(124, 217, 15, 0.5)
+        right: 0
+        top: 0
+        height: 100%
+        display: block
+        position: absolute
+        z-index: -1
+        +r(991)
+          width: 100vh
+          right: -150px
+  &__aside
+    padding: 40px 0 
+    padding-left: 60px
+    +r(1400)
+      padding-left: 0
+    +r(991)
+      display: none
+    &__section
+      padding-bottom: 20px
+    &__block
+      display: flex
+      align-items: flex-start
+      padding-bottom: 30px
+      &:hover
+        p
+          text-decoration: underline
+      img
+        max-width: 190px
+        width: 100%
+        margin: 0
+        +r(1200)
+          max-width: 120px
+      div
+        flex: 1
+        padding-left: 20px
