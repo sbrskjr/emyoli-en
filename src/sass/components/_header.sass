@@ -3,7 +3,9 @@
   position: relative
   z-index: 9
   background: #fff
-  padding: 8px 0
+  padding: 8px 60px
+  +r(1450)
+    padding: 8px 0
   +r(1040)
     position: fixed
     top: 0
@@ -108,7 +110,7 @@
         a
           +r(1040)
             font-size: 20px
-        &:last-child
+        &.header__nav_360
           a
             position: relative
             color: #000
@@ -137,6 +139,12 @@
               +r(1040)
                 top: 21px
                 right: -6px
+        &.heder__nav_mobile
+          display: none
+          +r(1040)
+            display: block
+            a
+              font-weight: bold
   &__btn
     display: flex
     align-items: center
