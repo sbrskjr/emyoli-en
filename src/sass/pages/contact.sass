@@ -1,17 +1,95 @@
 .contact
-  padding: 40px 0
+  padding: 50px 0 130px
+  background-repeat: no-repeat
+  background-size: 100% auto
+  background-image: url('../img/contact-bg.png')
+  background-position: center 100%
+  +r(1850)
+    background-size: contain
   +r(767)
     padding: 40px 0 60px
-  h1
-    font-weight: bold
-    font-size: 48px
-    color: #000
-    text-align: center
-    align-items: 1.5
-    margin-bottom: 10px
+  form
+    min-height: 1050px
     +r(767)
-      font-size: 30px
+      min-height: auto
+  &__title
+    h1, h2
+      font-weight: bold
+      font-size: 48px
+      color: #000
+      text-align: center
+      align-items: 1.5
+      margin-bottom: 10px
+      +r(767)
+        font-size: 30px
+    h2
+      margin-bottom: 60px
+      +r(767)
+        margin-bottom: 30px
+    b
+      font-size: 36px
+      color: #000000
+      font-weight: normal
+      max-width: 1300px
+      width: 100%
+      +relative-x
+      display: block
+      text-align: center
+      margin-bottom: 60px
+      strong
+        font-weight: bold
+      +r(767)
+        font-size: 22px
+        margin-bottom: 30px
+    span
+      font-size: 36px
+      color: #000
+      text-decoration: underline
+      text-align: center
+      display: block
+      margin-bottom: 60px
+      font-weight: normal
+      +r(767)
+        font-size: 22px
+    button
+      background: #7CD90F
+      border-radius: 6px
+      padding: 20px 140px 20px 40px
+      +center
+      max-width: 650px
+      width: 100%
+      +relative-x
+      font-weight: bold
+      font-size: 36px
+      color: #fff
+      position: relative
+      +tr
+      +r(767)
+        font-size: 30px
+        padding: 10px 50px 10px 20px
+      +r(530)
+        font-size: 20px
+      svg
+        fill: #fff
+        transform: rotate(180deg)
+        width: 60px
+        height: 60px
+        +tr
+        position: absolute
+        right: 40px
+        +r(767)
+          right: 10px
+          width: 30px
+          height: 30px
+      &:hover
+        text-decoration: underline
+        svg
+          right: 25px
+
   &__form
+    max-width: 715px
+    width: 100%
+    +relative-x
     h2
       margin-bottom: 5px
     p
@@ -52,11 +130,50 @@
         margin-bottom: 10px
       &:valid
         border-color: #7CD90F
+      &:focus
+        border: 2px solid #7CD90F
+    input[type="checkbox"]
+      display: none
+      &:checked + label
+        &:before
+          opacity: 0
+        svg
+          opacity: 1
+    label
+      font-size: 36px
+      color: #000000
+      padding-left: 50px
+      position: relative
+      margin: 40px 0
+      display: block
+      +r(767)
+        font-size: 25px
+      &::before
+        content: ''
+        position: absolute
+        left: 0
+        top: 14px
+        width: 30px
+        height: 30px
+        border-radius: 50%
+        border: 5px solid #7CD90F
+        +tr
+        +r(767)
+          top: 5px
+      svg
+        opacity: 0
+        width: 30px
+        height: 35px
+        fill: #7CD90F
+        position: absolute
+        left: 0
+        top: 10px
+        +tr
     textarea
       height: 205px
       +r(767)
         height: 250px
-    button
+    a
       background: #7CD90F
       border-radius: 6px
       padding: 20px 0
@@ -88,40 +205,89 @@
         text-decoration: underline
         svg
           left: 7px
-  &__connection
-    padding-top: 50px
-  h5
-    font-weight: bold
-    font-size: 36px
-    line-height: 1.5
-    color: #000
-    text-transform: uppercase
-    margin-bottom: 30px
-    margin-left: 55px
-    +r(767)
-      font-size: 30px
-      margin-left: 45px
-      margin-bottom: 10px
-  a
+    &__input.invalid 
+      input, textarea
+        border-color: #EB2629
+      label
+        color: #EB2629
+
+
+
+  &__btn
     display: flex
-    align-items: flex-start
-    margin-bottom: 5px
-    b
-      flex: 1
-      display: block
-      font-weight: normal
-      font-size: 36px
-      line-height: 1.5
-      color: #000
-      +r(767)
+    justify-content: space-around
+    +r(1300)
+      flex-direction: column
+      align-items: center
+    a
+      border-radius: 20px
+      display: flex
+      align-items: center
+      padding-left: 20px
+      overflow: hidden
+      background: #fff
+      max-width: 415px
+      width: 100%
+      +r(1300)
+        margin-bottom: 20px
+      img
+        width: 125px
+        +r(767)
+          width: 70px
+      span
+        font-weight: bold
         font-size: 30px
-    svg
-      width: 35px
-      height: 35px
-      fill: #7CD90F
-      margin-right: 20px
-      margin-top: 10px
-      +r(767)
-        margin-right: 20px
-        width: 25px
-        height: 25px
+        text-transform: uppercase
+        padding: 20px 5px
+        width: 260px
+        +center
+        color: #fff
+        flex: 1
+        position: relative
+        +r(767)
+          font-size: 20px
+        &::before
+          content: ''
+          height: 100%
+          width: 0
+          border: 90px solid transparent
+          border-left: 30px solid #fff
+          position: absolute
+          left: 0
+          bottom: 0
+          +tr
+      &:nth-child(1)
+        border: 3px solid #1DBECF
+        span
+          background: #1DBECF
+      &:nth-child(2)
+        border: 3px solid #7CD90F
+        span
+          background: #7CD90F
+      &:nth-child(3)
+        border: 3px solid #A92D91
+        span
+          background: #A92D91
+      &:hover span::before
+        border-left: 40px solid #fff
+
+
+  &__check
+    width: 100%
+    padding-top: 130px
+    display: none
+    +r(767)
+      padding-top: 0
+
+  &.contact--done
+    background-image: url('../img/contact-done-bg.png')
+    background-position: center
+    .contact__title 
+      h2
+        margin-bottom: 80px
+      p
+        font-size: 36px
+        color: #000
+        font-weight: normal
+        text-align: center
+        margin-bottom: 120px

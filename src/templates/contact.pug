@@ -5,33 +5,32 @@ extends layouts/_layout
 block content
   .contact
     .container
-      h1 Let’s work together
-      form.contact__form
-        .row
-          .col-lg-6.col-12
-            p Your message was sent!
+      form
+        .contact__form
+          .contact__title
+            h1 Let’s work together
+          p Your message was sent!
+          .contact__form__input.empty_field
             span Name
             input(type="text" name="name" placeholder="Name" required)
+          .contact__form__input.empty_field
             span Email
             input(type="email" name="email" placeholder="Email" required)
+          .contact__form__input.empty_field
             span Message
             textarea(name="message" placeholder="Leave your message here" required)
-            button(type="submit") Submit
+          .contact__form__input.empty_field
+            input(type="checkbox" id="checkbox" required)
+            label(for="checkbox") I’m not a robot
+              +icon('check')
+          a(href="#").btn-check Submit
+            +icon('double-left-chevron')
+        .contact__check
+          .contact__title
+            h2 Contacting Emyoli Technologies
+            b Please use this form to get a quote for 
+              strong leasing remote software developers. 
+              | For any other issue, please email us:
+            span service@emyoli.com
+            button(type="submit") Yes I Need Remote Software Developers For My Business
               +icon('double-left-chevron')
-          .col-lg-5.col-12.offset-lg-1
-            .contact__connection
-              h5 Israel Office
-              a(href="#") 
-                +icon('location')
-                b 1 Shenkar St. Herzliya
-              a(href="tel:+97293720009") 
-                +icon('tel')
-                b +972.9.3720009
-            .contact__connection
-              h5 New York Office
-              a(href="#") 
-                +icon('location')
-                b 70 West 83rd St. NYC, New York
-              a(href="tel:+9176991800") 
-                +icon('tel')
-                b +917.699.1800
