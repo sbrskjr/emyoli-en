@@ -1,6 +1,5 @@
 $('.btn-check').on('click', function(event) {
   event.preventDefault();
-  $(window).scrollTop() === 0;
   //проверка формы на валидность
   $(".contact__form .contact__form__input input[type='text'], .contact__form .contact__form__input textarea").each(function() {
     if($(this).val() === '') {
@@ -37,6 +36,8 @@ $('.btn-check').on('click', function(event) {
     //показываем предупреждения
     setTimeout(function() {
       $('.contact__check').fadeIn();
+      $(window).animate({ scrollTop: 0}, 1100); 
+      $('body').animate({ scrollTop: 0}, 1100);
     }, 300);
   }
   
