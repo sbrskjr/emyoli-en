@@ -36,8 +36,7 @@ $('.btn-check').on('click', function(event) {
     //показываем предупреждения
     setTimeout(function() {
       $('.contact__check').fadeIn();
-      $(window).animate({ scrollTop: 0}, 1100); 
-      $('body').animate({ scrollTop: 0}, 1100);
+      $('body, html').animate({scrollTop: 0}, 800);
     }, 300);
   }
   
