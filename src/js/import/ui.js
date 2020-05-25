@@ -10,3 +10,15 @@ $('.bg').click(function() {
   $('.header__nav').toggleClass('active');
   $('.bg').fadeToggle();
 });
+
+
+
+//pop-up open
+$('.pop-up_open').on('click', function(event) {
+  event.preventDefault();
+  $('.pop-up-bg').fadeIn();
+}); 
+//pop-up close
+$('.pop-up__close').on('click', function() {
+  $('.pop-up-bg').fadeOut();
+}); 

@@ -1,0 +1,20 @@
+---
+title: Call with Emyoli's CEO
+---
+extends layouts/_layout
+block content
+  .call.call--step-2
+    .container
+      h1 Call with Emyoli's CEO
+      p Are you sure you are interested in talking to Emyoli's CEO about starting a remote dedicated software team in Ukraine ? 
+      .call__btn
+        a(href="#").pop-up_open Yes, I am sure
+          +icon('double-left-chevron')
+        a(href="#") I am not sure yet
+          +icon('double-left-chevron')
+    .pop-up-bg
+      .pop-up
+        button.pop-up__close
+          +icon('close')
+        a(href="#") I am not a robot
+          +icon('double-left-chevron')
