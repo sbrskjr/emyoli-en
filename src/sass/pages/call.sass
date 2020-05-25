@@ -5,7 +5,8 @@
   background-image: url('../img/call-bg.png')
   background-position: 0 0
   +r(767)
-    padding: 40px 0
+    padding: 40px 0 80px
+    background: none !important
   h1
     font-size: 48px
     line-height: 1.5
@@ -16,19 +17,21 @@
     max-width: 620px
     +relative-x
     +r(767)
-      font-size: 30px
-      margin-bottom: 20px
+      font-size: 28px
+      margin-bottom: 40px
+      text-align: left
   p
     font-weight: bold
     font-size: 36px
     color: #000
-    text-align: justify
     width: 103%
     max-width: 960px
     display: block
+    text-align: justify
     +r(767)
       width: 100%
-      font-size: 24px
+      font-size: 20px
+      text-align: left
   &__img
     width: 305px
     height: 440px
@@ -37,6 +40,7 @@
     +relative-x
     +r(992)
       margin-top: 50px
+      display: none
     img
       height: 100%
     b
@@ -67,6 +71,8 @@
     +r(767)
       margin-top: 40px
       font-size: 24px
+      width: 100%
+      +center
     svg
       transform: rotate(180deg)
       fill: #fff
