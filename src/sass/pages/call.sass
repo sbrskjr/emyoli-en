@@ -40,9 +40,21 @@
     +relative-x
     +r(992)
       margin-top: 50px
-      display: none
+      position: fixed
+      top: -40px
+      right: 20px
+      left: auto
+      width: 70px
+      height: 70px
+      border-radius: 50%
+      z-index: 10
+      transform: none
     img
       height: 100%
+      +r(992)
+        transform: scale(1.2)
+        position: relative
+        bottom: -10px
     b
       position: absolute
       left: 0
@@ -56,6 +68,8 @@
       color: #000
       font-size: 21px
       text-transform: uppercase
+      +r(992)
+        display: none
   a
     background: #7CD90F
     border-radius: 16px
@@ -121,6 +135,10 @@
       width: 100%
       max-width: 900px
       +relative-x
+    .call__img
+      display: none
+      +r(992)
+        display: flex
     
 
 
