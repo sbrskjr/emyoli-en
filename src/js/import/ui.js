@@ -22,3 +22,34 @@ $('.pop-up_open').on('click', function(event) {
 $('.pop-up__close').on('click', function() {
   $('.pop-up-bg').fadeOut();
 }); 
+
+
+
+
+//button fixed
+setInterval(function() {
+  let i = 0;
+  $('.button-animation span').each(function(index, el) {
+    if(index === 0) {
+      if($(el).hasClass('active')) {
+        $(el).removeClass('active').addClass('left');
+        $(el).next().addClass('active').removeClass('right');
+        setTimeout(function() {
+          $('.button-animation span').removeClass('left');
+        }, 600);
+        return false;
+      }
+    } else{
+      if($(el).hasClass('active')) {
+        $(el).removeClass('active');
+        $(el).prev().addClass('active');
+        setTimeout(function() {
+          $(el).addClass('right');
+        }, 600);
+        return false;
+      }
+    }
+    i++;
+  });
+  i = 0;
+}, 7000);
