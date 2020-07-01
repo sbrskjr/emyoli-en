@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>All Page</title>
+    <title>Top block</title>
     <meta http-equiv="X-UA-Compatible" content="IE=Edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="theme-color" content="#fff">
@@ -14,7 +14,7 @@
     <!--BEGIN out-->
     <div class="out">
       <!--BEGIN header-->
-      <header class="header">
+      <header class="header header--top-video">
         <div class="container-fluid">
           <div class="header__row">
             <div class="header__nav">
@@ -38,27 +38,39 @@
       </header>
       <div class="bg"></div>
       <!--END header-->
-      <div class="pages">
-        <div class="container">
-          <h1>All Pages</h1>
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="top-block.html">Top block</a></li>
-            <li><a href="call-step-1.html">Call</a></li>
-            <li><a href="offshore.html">Offshore</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="customers.html">Customers</a></li>
-            <li><a href="videos.html">Videos</a></li>
-            <li><a href="video-single.html">Video Singl</a></li>
-            <li><a href="post.html">Post</a></li>
-            <li><a href="download.html">Download</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            <li><a href="contact-done.html">Contact Done</a></li>
-            <li><a href="apps.html">Apps</a></li>
-            <li><a href="blog.html">Blog</a></li>
-          </ul>
+      <div class="intro">
+        <script>
+          window.onload = function()
+          {
+            if (window.innerWidth >= 992)
+              document.getElementById('video-1').innerHTML = '<video src="img/video.mp4" loop autoplay poster="img/video-top-block.jpg" preload="auto" muted playsinline></video>'
+          };
+
+        </script>
+        <div class="intro__video" id="video-1"></div>
+        <div class="intro__content">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="intro__title">
+                  <h1>We are committed to complete transparency and 100% <span>accountability</span></h1>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="intro__row">
+                  <div class="intro__block"><img src="img/kellog.png" alt="">
+                    <p>Founded by Kellogg Northwestern Business School Graduates</p>
+                  </div>
+                  <div class="intro__block"><img src="img/ten-years.png" alt="">
+                    <p>Celebrating 10 Years in Business</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
+      <div class="block" style="padding: 50px 0"><img src="img/map.png" alt="" style="width: 100%"></div>
       <!--BEGIN footer-->
       <footer class="footer">
         <div class="container">

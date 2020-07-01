@@ -1,0 +1,31 @@
+---
+title: Top block
+headerClass: header--top-video
+---
+extends layouts/_layout
+block content
+  .intro
+    script.
+      window.onload = function(){
+        if(window.innerWidth >= 992)
+        document.getElementById('video-1').innerHTML = '<video src="img/video.mp4" loop autoplay poster="img/video-top-block.jpg" preload="auto" muted playsinline></video>'
+      };
+    .intro__video#video-1
+      //- video(src="img/video.mp4" loop autoplay poster="img/video-top-block.jpg" preload="auto" muted playsinline)
+    .intro__content
+      .container
+        .row
+          .col-lg-6
+            .intro__title
+              h1 We are committed to complete transparency and 100% 
+                span accountability
+          .col-lg-6
+            .intro__row
+              .intro__block
+                img(src="img/kellog.png", alt="")
+                p Founded by Kellogg Northwestern Business School Graduates
+              .intro__block
+                img(src="img/ten-years.png", alt="")
+                p Celebrating 10 Years in Business
+  .block(style="padding: 50px 0")
+    img(src="img/map.png", alt="")(style="width: 100%")

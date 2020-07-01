@@ -7,7 +7,8 @@
   +r(1450)
     padding: 8px 0
   +r(1040)
-    position: fixed
+    position: fixed !important
+    background: #fff !important
     top: 0
     left: 0
     width: 100%
@@ -18,6 +19,18 @@
       .header__btn
         opacity: 0
         visibility: hidden
+  &--top-video
+    +rmin(1040)
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      background: none
+      border-bottom: none
+      .header__nav ul li.item-116 a:before
+        background: #fff
+      .header__nav a, .header__btn a
+        color: #fff !important
   &__row
     display: flex
     align-items: center
