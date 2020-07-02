@@ -121,12 +121,14 @@ h1, h2, h3, h4
   +center
   display: inline-flex
   position: fixed
-  bottom: 0
   left: 50%
   transform: translate(-50%)
   animation: pulse2 4s infinite 
   overflow: hidden
   z-index: 99
+  bottom: -75px
+  &.scroll
+    bottom: 0
   +r(580)
     width: 290px
     height: 50px
@@ -257,7 +259,7 @@ h1, h2, h3, h4
       padding-top: 0
       position: absolute
       left: 0
-      top: 100px
+      top: 60px
       width: 100%
       background: rgba(32, 23, 27, 0.5)
       padding: 15px 20px 25px
@@ -300,3 +302,9 @@ h1, h2, h3, h4
         font-size: 18px
       +r(374)
         margin-left: -120px
+
+.block-map
+  img
+    width: 75%
+    +r(767)
+      width: 100%
