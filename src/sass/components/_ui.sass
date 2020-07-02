@@ -126,9 +126,12 @@ h1, h2, h3, h4
   animation: pulse2 4s infinite 
   overflow: hidden
   z-index: 99
-  bottom: -75px
-  &.scroll
-    bottom: 0
+  bottom: 0
+  +r(1040)
+    bottom: -80px
+    border-radius: 7px
+    &.scroll
+      bottom: 35px
   +r(580)
     width: 290px
     height: 50px

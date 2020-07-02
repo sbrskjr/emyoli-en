@@ -55,23 +55,24 @@ setInterval(function() {
 }, 7000);
 
 
-
-var mywindow = $(window);
-var mypos = mywindow.scrollTop();
-var up = false;
-var newscroll;
-mywindow.scroll(function() {
-  if(mywindow.scrollTop() > 100) {
-    newscroll = mywindow.scrollTop();
-    if (newscroll > mypos && !up) {
-      $('.button-animation').addClass('scroll');
-      up = !up;
-    } else if(newscroll < mypos && up) {
+if($(window).width() <= 1040) {
+  var mywindow = $(window);
+  var mypos = mywindow.scrollTop();
+  var up = false;
+  var newscroll;
+  mywindow.scroll(function() {
+    if(mywindow.scrollTop() > 100) {
+      newscroll = mywindow.scrollTop();
+      if (newscroll > mypos && !up) {
+        $('.button-animation').addClass('scroll');
+        up = !up;
+      } else if(newscroll < mypos && up) {
+        $('.button-animation').removeClass('scroll');
+        up = !up;
+      }
+      mypos = newscroll;
+    } else {
       $('.button-animation').removeClass('scroll');
-      up = !up;
     }
-    mypos = newscroll;
-  } else {
-    $('.button-animation').removeClass('scroll');
-  }
-});
+  });
+}
