@@ -190,9 +190,13 @@ h1, h2, h3, h4
   overflow: hidden
   position: relative
   +r(992)
-    +cover
+    background-repeat: no-repeat
+    background-size: cover
+    background-position: 50% 0
     background-image: url('../img/video-top-block.jpg')
     height: 700px
+  +r(650)
+    background-image: url('../img/video-top-block.png')
   &__video
     position: absolute
     width: 100%
@@ -307,7 +311,20 @@ h1, h2, h3, h4
         margin-left: -120px
 
 .block-map
+  padding: 70px 0 30px
+  +r(767)
+    padding: 40px 0 15px
+  h2
+    ont-weight: bold
+    font-size: 48px
+    color: #7CD90F
+    text-align: center
+    margin-bottom: 50px
+    line-height: 1.5
+    +r(767)
+      font-size: 30px
   img
     width: 75%
+    +relative-x
     +r(767)
       width: 100%
